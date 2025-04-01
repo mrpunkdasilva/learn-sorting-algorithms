@@ -1,1 +1,1 @@
-# Learn Data Structures
+# Learn Sorting Algorithms
