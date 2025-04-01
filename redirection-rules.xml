@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="5ef512b1">
+        <description><![CDATA[Created after removal of "<Análise-de-Mercado.md>" from Flash Pomo - Home]]></description>
+        <accepts>Análise-de-Mercado.html</accepts>
+    </rule>
+    <rule id="377eb300">
+        <description>Created after removal of "Relatório de Desenvolvimento de Software" from Flash Pomo - Home
+        </description>
+        <accepts>Capa.html</accepts>
+    </rule>
+    <rule id="6bba92cf">
+        <description>Created after removal of "Sumario" from Flash Pomo - Home</description>
+        <accepts>Sumario.html</accepts>
+    </rule>
+    <rule id="18125b64">
+        <description><![CDATA[Created after removal of "<Projeto.md>" from Flash Pomo - Home]]></description>
+        <accepts>Projeto.html</accepts>
+    </rule>
+    <rule id="23feaf5">
+        <description>Created after removal of "Mercado" from Flash Pomo - Home</description>
+        <accepts>Mercado.html</accepts>
+    </rule>
+    <rule id="f85deed">
+        <description>Created after removal of "Diagrama de Casos de Uso" from Flash Pomo - Home</description>
+        <accepts>Diagrama-de-Casos-de-Uso.html</accepts>
+    </rule>
+    <rule id="66d17486">
+        <description><![CDATA[Created after removal of "<Casos-de-Uso.md>" from Flash Pomo - Home]]></description>
+        <accepts>Casos-de-Uso.html</accepts>
+    </rule>
+    <rule id="10a0b3ad">
+        <description>
+            <![CDATA[Created after removal of "<Diagrama-de-Sequencia.md>" from Flash Pomo - Home]]></description>
+        <accepts>Diagrama-de-Sequencia.html</accepts>
+    </rule>
+    <rule id="4beb9152">
+        <description>
+            <![CDATA[Created after removal of "<Wireframe-ou-Prótotipo.md>" from Flash Pomo - Home]]></description>
+        <accepts>Wireframe-ou-Prótotipo.html</accepts>
+    </rule>
+    <rule id="4481882f">
+        <description><![CDATA[Created after removal of "<Modelagem-De-Dados.md>" from Flash Pomo - Home]]></description>
+        <accepts>Modelagem-De-Dados.html</accepts>
+    </rule>
+    <rule id="61066303">
+        <description><![CDATA[Created after removal of "<UML.md>" from Flash Pomo - Home]]></description>
+        <accepts>UML.html</accepts>
+    </rule>
+    <rule id="413210c4">
+        <description>
+            <![CDATA[Created after removal of "<Arquitetura-de-Informação.md>" from Flash Pomo - Home]]></description>
+        <accepts>Arquitetura-de-Informação.html</accepts>
+    </rule>
+    <rule id="40bd8812">
+        <description>
+            <![CDATA[Created after removal of "<Engenharia-de-Requisitos.md>" from Flash Pomo - Home]]></description>
+        <accepts>Engenharia-de-Requisitos.html</accepts>
+    </rule>
+    <rule id="32b22f2c">
+        <description>Created after removal of "Schemas" from Flash Pomo - Home</description>
+        <accepts>Schemas.html</accepts>
+    </rule>
+    <rule id="7c10f9cd">
+        <description>Created after removal of "Ensemble" from Flash Pomo - Home</description>
+        <accepts>Ensemble.html</accepts>
+    </rule>
+    <rule id="5c9e673b">
+        <description>Created after removal of "User" from Flash Pomo - Home</description>
+        <accepts>User.html</accepts>
+    </rule>
+    <rule id="22393173">
+        <description>Created after removal of "GET ensemble/" from Flash Pomo - Home</description>
+        <accepts>GET_ensemble.html</accepts>
+    </rule>
+    <rule id="1bddf051">
+        <description>Created after removal of "API Reference" from Flash Pomo - Home</description>
+        <accepts>API_Reference.html</accepts>
+    </rule>
+    <rule id="11e78cc2">
+        <description>Created after removal of "Schemas" from Flash Pomo - Home</description>
+        <accepts>Schemas2.html</accepts>
+    </rule>
+    <rule id="5aa2e1ca">
+        <description>Created after removal of "PurchaseRequestDTO" from Flash Pomo - Home</description>
+        <accepts>PurchaseRequestDTO.html</accepts>
+    </rule>
+    <rule id="1d5debd8">
+        <description>Created after removal of "PomodoroStoryRequestDTO" from Flash Pomo - Home</description>
+        <accepts>PomodoroStoryRequestDTO.html</accepts>
+    </rule>
+    <rule id="66290c2f">
+        <description>Created after removal of "FavoriteRequestDTO" from Flash Pomo - Home</description>
+        <accepts>FavoriteRequestDTO.html</accepts>
+    </rule>
+    <rule id="5045eb9e">
+        <description>Created after removal of "BoxRequestDTO" from Flash Pomo - Home</description>
+        <accepts>BoxRequestDTO.html</accepts>
+    </rule>
+    <rule id="511bb9be">
+        <description>Created after removal of "GetByIdResponse" from Flash Pomo - Home</description>
+        <accepts>GetByIdResponse.html</accepts>
+    </rule>
+    <rule id="517568d3">
+        <description>Created after removal of "ResponseCommonDTO" from Flash Pomo - Home</description>
+        <accepts>ResponseCommonDTO.html</accepts>
+    </rule>
+    <rule id="bb335d8">
+        <description>Created after removal of "ResponseUserEditDTO" from Flash Pomo - Home</description>
+        <accepts>ResponseUserEditDTO.html</accepts>
+    </rule>
+    <rule id="39f55910">
+        <description>Created after removal of "UserEditRequestDTO" from Flash Pomo - Home</description>
+        <accepts>UserEditRequestDTO.html</accepts>
+    </rule>
+    <rule id="63273f0e">
+        <description>Created after removal of "Flashcard" from Flash Pomo - Home</description>
+        <accepts>Flashcard.html</accepts>
+    </rule>
+    <rule id="569ac808">
+        <description>Created after removal of "FlashcardRequestDTO" from Flash Pomo - Home</description>
+        <accepts>FlashcardRequestDTO.html</accepts>
+    </rule>
+    <rule id="7e37be21">
+        <description>Created after removal of "FlashcardRequestEditDTO" from Flash Pomo - Home</description>
+        <accepts>FlashcardRequestEditDTO.html</accepts>
+    </rule>
+    <rule id="7e9740e3">
+        <description>Created after removal of "Ensemble" from Flash Pomo - Home</description>
+        <accepts>Ensemble2.html</accepts>
+    </rule>
+    <rule id="4445bb11">
+        <description>Created after removal of "User" from Flash Pomo - Home</description>
+        <accepts>User2.html</accepts>
+    </rule>
+    <rule id="1950baa4">
+        <description>Created after removal of "EnsembleRequestDTO" from Flash Pomo - Home</description>
+        <accepts>EnsembleRequestDTO.html</accepts>
+    </rule>
+    <rule id="3b69d52">
+        <description>Created after removal of "RegisterRequestDTO" from Flash Pomo - Home</description>
+        <accepts>RegisterRequestDTO.html</accepts>
+    </rule>
+    <rule id="a499678">
+        <description>Created after removal of "ResponseEntity" from Flash Pomo - Home</description>
+        <accepts>ResponseEntity.html</accepts>
+    </rule>
+    <rule id="599f348a">
+        <description>Created after removal of "HttpHeaders" from Flash Pomo - Home</description>
+        <accepts>HttpHeaders.html</accepts>
+    </rule>
+    <rule id="b55f8f6">
+        <description>Created after removal of "LoginRequestDTO" from Flash Pomo - Home</description>
+        <accepts>LoginRequestDTO.html</accepts>
+    </rule>
+    <rule id="7ecad888">
+        <description>Created after removal of "API Reference" from Flash Pomo - Home</description>
+        <accepts>API_Reference2.html</accepts>
+    </rule>
+    <rule id="af80b4">
+        <description>Created after removal of "ResponseUserEditDTO" from Flash Pomo - Home</description>
+        <accepts>ResponseUserEditDTO2.html</accepts>
+    </rule>
+    <rule id="5bb36a18">
+        <description>Created after removal of "UserEditRequestDTO" from Flash Pomo - Home</description>
+        <accepts>UserEditRequestDTO2.html</accepts>
+    </rule>
+    <rule id="1b40687d">
+        <description>Created after removal of "FlashcardRequestDTO" from Flash Pomo - Home</description>
+        <accepts>FlashcardRequestDTO2.html</accepts>
+    </rule>
+    <rule id="1eb9fd2e">
+        <description>Created after removal of "FlashcardRequestEditDTO" from Flash Pomo - Home</description>
+        <accepts>FlashcardRequestEditDTO2.html</accepts>
+    </rule>
+    <rule id="6f43956e">
+        <description>Created after removal of "EnsembleRequestDTO" from Flash Pomo - Home</description>
+        <accepts>EnsembleRequestDTO2.html</accepts>
+    </rule>
+    <rule id="71a05c61">
+        <description>Created after removal of "LoginRequestDTO" from Flash Pomo - Home</description>
+        <accepts>LoginRequestDTO2.html</accepts>
+    </rule>
+    <rule id="2c05ac36">
+        <description>Created after removal of "HttpHeaders" from Flash Pomo - Home</description>
+        <accepts>HttpHeaders2.html</accepts>
+    </rule>
+    <rule id="4e87a5b2">
+        <description><![CDATA[Created after removal of "<POST_auth_login.md>" from Flash Pomo - Home]]></description>
+        <accepts>POST_auth_login.html</accepts>
+    </rule>
+    <rule id="4b9c293f">
+        <description><![CDATA[Created after removal of "<POST_auth_register.md>" from Flash Pomo - Home]]></description>
+        <accepts>POST_auth_register.html</accepts>
+    </rule>
+    <rule id="4100e4ec">
+        <description><![CDATA[Created after removal of "<GET_user.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_user.html</accepts>
+    </rule>
+    <rule id="7322f40">
+        <description><![CDATA[Created after removal of "<GET_user_userId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_user_userId_.html</accepts>
+    </rule>
+    <rule id="188141c8">
+        <description><![CDATA[Created after removal of "<PUT_user_userId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>PUT_user_userId_.html</accepts>
+    </rule>
+    <rule id="ccb40f2">
+        <description>
+            <![CDATA[Created after removal of "<DELETE_user_userId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>DELETE_user_userId_.html</accepts>
+    </rule>
+    <rule id="33cc41a7">
+        <description>
+            <![CDATA[Created after removal of "<GET_ensemble_ensembleId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_ensemble_ensembleId_.html</accepts>
+    </rule>
+    <rule id="7f5306c6">
+        <description>
+            <![CDATA[Created after removal of "<PUT_ensemble_ensembleId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>PUT_ensemble_ensembleId_.html</accepts>
+    </rule>
+    <rule id="147ed4bf">
+        <description>
+            <![CDATA[Created after removal of "<DELETE_ensemble_ensembleId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>DELETE_ensemble_ensembleId_.html</accepts>
+    </rule>
+    <rule id="514303d8">
+        <description><![CDATA[Created after removal of "<GET_ensemble2.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_ensemble2.html</accepts>
+    </rule>
+    <rule id="23fa6439">
+        <description><![CDATA[Created after removal of "<POST_ensemble.md>" from Flash Pomo - Home]]></description>
+        <accepts>POST_ensemble.html</accepts>
+    </rule>
+    <rule id="5a2a423e">
+        <description>
+            <![CDATA[Created after removal of "<GET_flashcard_flashcardId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_flashcard_flashcardId_.html</accepts>
+    </rule>
+    <rule id="739993b6">
+        <description>
+            <![CDATA[Created after removal of "<PUT_flashcard_flashcardId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>PUT_flashcard_flashcardId_.html</accepts>
+    </rule>
+    <rule id="6e72bca2">
+        <description>
+            <![CDATA[Created after removal of "<DELETE_flashcard_flashcardId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>DELETE_flashcard_flashcardId_.html</accepts>
+    </rule>
+    <rule id="132386d9">
+        <description><![CDATA[Created after removal of "<GET_flashcard.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_flashcard.html</accepts>
+    </rule>
+    <rule id="3e6724ba">
+        <description><![CDATA[Created after removal of "<POST_flashcard.md>" from Flash Pomo - Home]]></description>
+        <accepts>POST_flashcard.html</accepts>
+    </rule>
+    <rule id="76ca1f61">
+        <description>
+            <![CDATA[Created after removal of "<GET_flashcard_ensemble_ensemble_.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_flashcard_ensemble_ensemble_.html</accepts>
+    </rule>
+    <rule id="202f58cb">
+        <description>
+            <![CDATA[Created after removal of "<GET_pomodoro_story_pomodoroStoryId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_pomodoro_story_pomodoroStoryId_.html</accepts>
+    </rule>
+    <rule id="5c37ecd2">
+        <description>
+            <![CDATA[Created after removal of "<PUT_pomodoro_story_pomodoroStoryId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>PUT_pomodoro_story_pomodoroStoryId_.html</accepts>
+    </rule>
+    <rule id="6e124e93">
+        <description>
+            <![CDATA[Created after removal of "<POST_pomodoro_story_pomodoroStoryId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>POST_pomodoro_story_pomodoroStoryId_.html</accepts>
+    </rule>
+    <rule id="44d1dcf9">
+        <description><![CDATA[Created after removal of "<GET_pomodoro_story.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_pomodoro_story.html</accepts>
+    </rule>
+    <rule id="49b59bd9">
+        <description>
+            <![CDATA[Created after removal of "<GET_favorite_favoriteId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_favorite_favoriteId_.html</accepts>
+    </rule>
+    <rule id="458e1df">
+        <description>
+            <![CDATA[Created after removal of "<PUT_favorite_favoriteId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>PUT_favorite_favoriteId_.html</accepts>
+    </rule>
+    <rule id="df69187">
+        <description>
+            <![CDATA[Created after removal of "<DELETE_favorite_favoriteId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>DELETE_favorite_favoriteId_.html</accepts>
+    </rule>
+    <rule id="1a41346f">
+        <description><![CDATA[Created after removal of "<GET_favorite.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_favorite.html</accepts>
+    </rule>
+    <rule id="58726a1d">
+        <description><![CDATA[Created after removal of "<POST_favorite.md>" from Flash Pomo - Home]]></description>
+        <accepts>POST_favorite.html</accepts>
+    </rule>
+    <rule id="37bd3b44">
+        <description>
+            <![CDATA[Created after removal of "<PUT_box_favoriteId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>PUT_box_favoriteId_.html</accepts>
+    </rule>
+    <rule id="6db94b37">
+        <description>
+            <![CDATA[Created after removal of "<DELETE_box_favoriteId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>DELETE_box_favoriteId_.html</accepts>
+    </rule>
+    <rule id="3e3ca20f">
+        <description><![CDATA[Created after removal of "<GET_box.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_box.html</accepts>
+    </rule>
+    <rule id="2e362b39">
+        <description><![CDATA[Created after removal of "<POST_box.md>" from Flash Pomo - Home]]></description>
+        <accepts>POST_box.html</accepts>
+    </rule>
+    <rule id="6b1120ad">
+        <description><![CDATA[Created after removal of "<GET_box_boxId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_box_boxId_.html</accepts>
+    </rule>
+    <rule id="7ccef88d">
+        <description>
+            <![CDATA[Created after removal of "<GET_purchase_purchaseId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_purchase_purchaseId_.html</accepts>
+    </rule>
+    <rule id="53a1ef9b">
+        <description>
+            <![CDATA[Created after removal of "<PUT_purchase_purchaseId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>PUT_purchase_purchaseId_.html</accepts>
+    </rule>
+    <rule id="66b33726">
+        <description>
+            <![CDATA[Created after removal of "<POST_purchase_purchaseId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>POST_purchase_purchaseId_.html</accepts>
+    </rule>
+    <rule id="271b366a">
+        <description>
+            <![CDATA[Created after removal of "<DELETE_purchase_purchaseId_.md>" from Flash Pomo - Home]]></description>
+        <accepts>DELETE_purchase_purchaseId_.html</accepts>
+    </rule>
+    <rule id="4fcbea8b">
+        <description><![CDATA[Created after removal of "<GET_purchase.md>" from Flash Pomo - Home]]></description>
+        <accepts>GET_purchase.html</accepts>
+    </rule>
+    <rule id="2ff0c235">
+        <description>
+            <![CDATA[Created after removal of "<PurchaseRequestDTO2.md>" from Flash Pomo - Home]]></description>
+        <accepts>PurchaseRequestDTO2.html</accepts>
+    </rule>
+    <rule id="7eb862b7">
+        <description>
+            <![CDATA[Created after removal of "<PomodoroStoryRequestDTO2.md>" from Flash Pomo - Home]]></description>
+        <accepts>PomodoroStoryRequestDTO2.html</accepts>
+    </rule>
+    <rule id="bee867c">
+        <description>
+            <![CDATA[Created after removal of "<FavoriteRequestDTO2.md>" from Flash Pomo - Home]]></description>
+        <accepts>FavoriteRequestDTO2.html</accepts>
+    </rule>
+    <rule id="282fca2a">
+        <description><![CDATA[Created after removal of "<BoxRequestDTO2.md>" from Flash Pomo - Home]]></description>
+        <accepts>BoxRequestDTO2.html</accepts>
+    </rule>
+    <rule id="4fb72f80">
+        <description><![CDATA[Created after removal of "<GetByIdResponse2.md>" from Flash Pomo - Home]]></description>
+        <accepts>GetByIdResponse2.html</accepts>
+    </rule>
+    <rule id="8b1e769">
+        <description><![CDATA[Created after removal of "<ResponseCommonDTO2.md>" from Flash Pomo - Home]]></description>
+        <accepts>ResponseCommonDTO2.html</accepts>
+    </rule>
+    <rule id="3e0b6b9c">
+        <description><![CDATA[Created after removal of "<Flashcard2.md>" from Flash Pomo - Home]]></description>
+        <accepts>Flashcard2.html</accepts>
+    </rule>
+    <rule id="1a782161">
+        <description><![CDATA[Created after removal of "<Ensemble3.md>" from Flash Pomo - Home]]></description>
+        <accepts>Ensemble3.html</accepts>
+    </rule>
+    <rule id="4486fadf">
+        <description><![CDATA[Created after removal of "<User3.md>" from Flash Pomo - Home]]></description>
+        <accepts>User3.html</accepts>
+    </rule>
+    <rule id="2109f1d6">
+        <description>
+            <![CDATA[Created after removal of "<RegisterRequestDTO2.md>" from Flash Pomo - Home]]></description>
+        <accepts>RegisterRequestDTO2.html</accepts>
+    </rule>
+    <rule id="717af8e2">
+        <description><![CDATA[Created after removal of "<ResponseEntity2.md>" from Flash Pomo - Home]]></description>
+        <accepts>ResponseEntity2.html</accepts>
+    </rule>
+    <rule id="745b0996">
+        <description>Created after removal of "Daily Meeting Report" from Flash Pomo - Home</description>
+        <accepts>Daily-Meeting-Report.html</accepts>
+    </rule>
+</rules>
