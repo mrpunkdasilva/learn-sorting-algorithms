@@ -48,7 +48,7 @@ graph TD
 
 ## Partindo para o código
 
-```c
+```c++
 #include <iostream>
 #include <cstdlib>
 #define MAX_SIZE 100
