@@ -31,7 +31,7 @@ Implementei um algoritmo simples que compara os elementos um a um. É como quand
 
 - Na quarta iteração temos que $i_{4}$ não é menor que $j_{4}$, que é uma **falsidade** logo ele precisa ser trocado com $i_{4}$:
 
-![Quarta iteração](quartaiteracao.)
+![Quarta iteração](quartaiteracao)
 
 - Na quita iteração e última já que os elementos estão ordenados corretamente:
 
