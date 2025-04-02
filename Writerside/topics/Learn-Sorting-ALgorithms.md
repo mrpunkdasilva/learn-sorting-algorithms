@@ -6,7 +6,7 @@ Algoritmos de ordenação funcionam como organizar uma bagunça - você pega uma
 
 Imagine esta fila de anões:
 
-![Fila de anão](Fila de anão)
+![Fila de anão](filadeanao)
 
 ## O Básico Fundamental
 
@@ -20,22 +20,22 @@ Implementei um algoritmo simples que compara os elementos um a um. É como quand
 > **Iteração** ocorre quando repetimos o algoritmo várias vezes. Quando dizemos "iteração 1", significa que executamos o algoritmo uma vez.
 
 - **Primeira iteração**: Comparo o primeiro anão ($i_1$) com o segundo ($j_1$). Se $i_1$ for menor, está correto (verdadeiro).  
-![Primeira iteração](Primeira iteração)
+![Primeira iteração](Primeiraiteracao)
 
 - **Segunda iteração**: Agora comparo $i_2$ com $j_2$. Se não for menor (falso), preciso trocá-los de lugar.  
-![Segunda iteração](Segunda iteração)
+![Segunda iteração](segundaint)
 
 - Na terceira iteração temos que $i_{3}$ é menor que $j_{3}$, que é uma **verdade** logo ele não precisa ser trocado com $i_{3}$:
 
-![Terceira iteração](Terceira iteração)
+![Terceira iteração](terceiraint)
 
 - Na quarta iteração temos que $i_{4}$ não é menor que $j_{4}$, que é uma **falsidade** logo ele precisa ser trocado com $i_{4}$:
 
-![Quarta iteração](Quarta iteração)
+![Quarta iteração](quartainteração)
 
 - Na quita iteração e última já que os elementos estão ordenados corretamente:
 
-![Quinta interação](Quinta interação)
+![Quinta interação](quintainteracao)
 
 ## O Que Todo Algoritmo de Ordenação Precisa
 
