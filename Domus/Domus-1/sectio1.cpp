@@ -5,47 +5,48 @@ using namespace std;
 
 int main()
 {
-    int n;
-    int array[MAX_SIZE];
+    int n;  // Quantidade de elementos
+    int array[MAX_SIZE];  // Nosso array (lista)
 
+    // Pede ao usuário informar quantos elementos deseja
     cout << "Enter a number: " << endl;
     cin >> n;
 
-    // preenchendo array
+    // Preenche o array com números aleatórios
     for (int i = 0; i < n; i++) {
-        array[i] = rand();
+        array[i] = rand();  // rand() gera número aleatório
     }
 
-    // saida do array
+    // Exibe o array desordenado
     for (int i = 0; i < n; i++) {
         cout << " [ " << array[i] <<  " ]  ";
     }
     cout << endl;
 
-    // ordenar o array
+    // ALGORITMO DE ORDENAÇÃO (o núcleo do código)
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
-            // Com isso conseguimos acesar o número e seu sucessor
-            cout  << array[i] << " < " << array[j] << " " << endl;
+            // Mostra quais elementos estão sendo comparados
+            cout << array[i] << " < " << array[j] << " " << endl;
 
-            // ordem ascendente - se for descencedente basta inverter e colocar ">"
+            // Se o elemento atual for MENOR que o próximo
             if (array[i] < array[j])
             {
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                // Realiza a troca (swap) dos elementos
+                int temp = array[i];  // Armazena o valor temporariamente
+                array[i] = array[j];  // Substitui i por j
+                array[j] = temp;     // Completa a troca
             }
         }
     }
 
     cout << "==============================" << endl;
 
-    // exibir o array ordenado
+    // Exibe o array ordenado (em ordem decrescente)
     for (int i = 0; i < n; i++) {
         cout << array[i] << "  ";
     }
     cout << endl;
-
 
     return 0;
 }
