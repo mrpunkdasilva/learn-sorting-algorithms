@@ -1,65 +1,113 @@
-# Learn Sorting Algorithms
+# Learn Sorting Algorithm
 
-Algoritmos de ordenação é quando temos um input (_entrada_) de uma lista por exemplo de anões e você quer ter a saida que é a ordem correta dessa fila por tamanho
+## Entendendo Algoritmos de Ordenação
 
-Tome-mos que está é a suposta fila: 
+Algoritmos de ordenação funcionam como organizar uma bagunça - você pega uma lista desordenada (como anões de tamanhos diferentes) e os coloca na ordem correta (do menor para o maior ou vice-versa).
 
-![Fila de anão](Fila de anão)
+Imagine esta fila de anões:
 
+![Fila de anão](Fila%20de%20anão)
 
-Agora vamos implementar um algoritmo simples de ordenação que vai ser compara um por um  os elementos
+## O Básico Fundamental
 
-> Lembrando que algoritmo é uma sequencia finita e lóǵicas de passos a fim de resolver um problema
+Implementei um algoritmo simples que compara os elementos um a um. É como quando você organiza suas roupas - pega cada peça e compara com as outras para ver qual é maior ou menor.
+
+> **Lembrando**: Um algoritmo é apenas uma sequência lógica de passos para resolver um problema.
 > {style="note"}
 
-## Aplicando o algorithm
+## Como Funciona na Prática
 
-> Lembrando que iteração é o fato de executar um algoritmo uma quantidade finita de vezes
-> Então falamos estamos na iteração 1 significa que executamos o algoritmo uma vez
+> **Iteração** ocorre quando repetimos o algoritmo várias vezes. Quando dizemos "iteração 1", significa que executamos o algoritmo uma vez.
 
-- Na primeira iteração do algorítimo temos que $i_{1}$ é menor que $j_i$, que é uma **verdade** logo ele está no lugar certo:
+- **Primeira iteração**: Comparo o primeiro anão ($i_1$) com o segundo ($j_1$). Se $i_1$ for menor, está correto (verdadeiro).  
+![Primeira iteração](Primeira%20iteração)
 
-![Primeira iteração](Primeira iteração)
+- **Segunda iteração**: Agora comparo $i_2$ com $j_2$. Se não for menor (falso), preciso trocá-los de lugar.  
+![Segunda iteração](Segunda%20iteração)
 
-> Por convenção chamamos quaisquer elementos de uma lista de $i$ e $j$
+(E assim por diante... até que na quinta iteração todos estejam na ordem correta)
 
-- Na segunda iteração temos que $i_{2}$ não é menor que $j_{2}$, que é uma **falsidade** (que nem os amores poeris que tive durante a vida) logo ele precisa ser trocado com $i_{2}$:
+## O Que Todo Algoritmo de Ordenação Precisa
 
-![Segunda iteração](Segunda iteração)
+Resumindo, todo algoritmo de ordenação possui:
 
-- Na terceira iteração temos que $i_{3}$ é menor que $j_{3}$, que é uma **verdade** logo ele não precisa ser trocado com $i_{3}$:
-
-![Terceira iteração](Terceira iteração)
-
-- Na quarta iteração temos que $i_{4}$ não é menor que $j_{4}$, que é uma **falsidade** logo ele precisa ser trocado com $i_{4}$:
-
-![Quarta iteração](Quarta iteração)
-
-- Na quita iteração e última já que os elementos estão ordenados corretamente:
-
-![Quinta interação](Quinta interação)
-
-## Características dos algoritmos de ordenação
-
-Abstraindo um algoritmo de ordenação, temos que ele possui:
-
-- **Lista de elementos de entrada:** A lista que vamos ordenar.
-- **Tipo de ordenação:** Define se a ordenação será crescente ou decrescente.
-- **Iterações:** Quantidade de vezes que o algoritmo será executado.
-- **Comparações:** O tipo de comparação a ser feita com base no tipo de ordenação.
-- **Lista de elementos de saída:** A lista ordenada que esperamos obter ao usar o algoritmo.
+1. **Entrada**: A lista desordenada
+2. **Tipo de ordem**: Crescente ou decrescente
+3. **Iterações**: Quantidade de repetições do processo
+4. **Comparações**: Critério para comparar os elementos
+5. **Saída**: A lista organizada
 
 ```mermaid
 graph TD
-    A[Algoritmo de Ordenação] --> B[Lista de elementos de entrada]
-    A --> C[Tipo de ordenação]
-    A --> D[Iterações]
-    A --> E[Comparações]
-    A --> F[Lista de elementos de saída]
-    
-    B --> G[Lista não ordenada]
-    C --> H[Crescente ou Decrescente]
-    D --> I[Número de execuções]
-    E --> J[Baseadas no tipo de ordenação]
-    F --> K[Lista ordenada]
+    A[Algoritmo] --> B[Lista desordenada]
+    A --> C[Ordem crescente/decrescente]
+    A --> D[Repetições necessárias]
+    A --> E[Como comparar]
+    A --> F[Lista ordenada]
 ```
+
+## Partindo para o código
+
+```c
+#include <iostream>
+#include <cstdlib>
+#define MAX_SIZE 100
+using namespace std;
+
+int main()
+{
+    int n;  // Quantidade de elementos
+    int array[MAX_SIZE];  // Nosso array (lista)
+
+    // Pede ao usuário informar quantos elementos deseja
+    cout << "Enter a number: " << endl;
+    cin >> n;
+
+    // Preenche o array com números aleatórios
+    for (int i = 0; i < n; i++) {
+        array[i] = rand();  // rand() gera número aleatório
+    }
+
+    // Exibe o array desordenado
+    for (int i = 0; i < n; i++) {
+        cout << " [ " << array[i] <<  " ]  ";
+    }
+    cout << endl;
+
+    // ALGORITMO DE ORDENAÇÃO (o núcleo do código)
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            // Mostra quais elementos estão sendo comparados
+            cout << array[i] << " < " << array[j] << " " << endl;
+
+            // Se o elemento atual for MENOR que o próximo
+            if (array[i] < array[j])
+            {
+                // Realiza a troca (swap) dos elementos
+                int temp = array[i];  // Armazena o valor temporariamente
+                array[i] = array[j];  // Substitui i por j
+                array[j] = temp;     // Completa a troca
+            }
+        }
+    }
+
+    cout << "==============================" << endl;
+
+    // Exibe o array ordenado (em ordem decrescente)
+    for (int i = 0; i < n; i++) {
+        cout << array[i] << "  ";
+    }
+    cout << endl;
+
+    return 0;
+}
+```
+
+### Pontos Importantes:
+
+1. **rand()**: Gera números aleatórios para preencher o array
+2. **Dois loops for**: O externo seleciona cada elemento, o interno compara com os demais
+3. **Swap (troca)**: Utilizamos uma variável temporária (`temp`) para preservar o valor durante a troca
+4. **Ordenação decrescente**: Substitua `<` por `>` para obter ordem crescente
+
+Este é um algoritmo simples (não muito eficiente para listas grandes), mas excelente para compreender o conceito fundamental!
