@@ -6,4 +6,5 @@
                  name="Learn Sorting Algorithms"
                  start-page="Learn-Sorting-ALgorithms.md">
     <toc-element topic="Learn-Sorting-ALgorithms.md"/>
+    <toc-element topic="Selection-Sort.md"/>
 </instance-profile>
