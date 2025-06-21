@@ -17,5 +17,14 @@
         <toc-element topic="ExercisesSelectionSort.md"/>
         <toc-element topic="ConclusionSelectionSort.md"/>
     </toc-element>
-    <toc-element topic="Bubble-Sort.md"/>
+    <toc-element topic="Bubble-Sort.md">
+        <toc-element topic="ImplementationBubbleSort.md"/>
+        <toc-element topic="WhyBubbleSortIsStable.md"/>
+        <toc-element topic="BubbleSortAdvantages-vs-Disvantages.md"/>
+        <toc-element topic="WhenToUseBubbleSort.md"/>
+        <toc-element topic="ComparationBubbleSort.md"/>
+        <toc-element topic="BubbleSortVariations.md"/>
+        <toc-element topic="ExercisesBubbleSort.md"/>
+        <toc-element topic="ConclusionBubbleSort.md"/>
+    </toc-element>
 </instance-profile>
