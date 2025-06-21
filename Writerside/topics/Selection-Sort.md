@@ -1,7 +1,5 @@
 # Selection Sort
 
-![selectionSort_anotado.svg](selectionSort_anotado.svg)
-
 ## O que é Selection Sort?
 
 O **Selection Sort** é um algoritmo de ordenação simples e intuitivo que funciona dividindo o array em duas partes:
@@ -16,6 +14,10 @@ O algoritmo funciona da seguinte forma:
 2. **Troca** esse elemento com o primeiro elemento da parte não ordenada
 3. **Expande** a parte ordenada em uma posição
 4. **Repete** o processo até que todo o array esteja ordenado
+
+## Diagramação {collapsible="true"}
+
+![selectionSort_anotado.svg](selectionSort_anotado.svg)
 
 ### Exemplo Visual
 
@@ -156,11 +158,11 @@ void swapElements(int dataArray[], int firstPosition, int secondPosition)
 
 Esta implementação inclui:
 
-🔍 **Rastreamento de busca**: Mostra cada comparação ao procurar o menor elemento
-📊 **Contagem de operações**: Conta comparações e trocas realizadas
-📺 **Visualização do estado**: Elementos ordenados aparecem entre `[colchetes]`
-📈 **Progresso visual**: Mostra quantos elementos já foram ordenados
-📝 **Explicações em tempo real**: Cada operação é explicada durante a execução
+* 🔍 **Rastreamento de busca**: Mostra cada comparação ao procurar o menor elemento
+* 📊 **Contagem de operações**: Conta comparações e trocas realizadas
+* 📺 **Visualização do estado**: Elementos ordenados aparecem entre `[colchetes]`
+* 📈 **Progresso visual**: Mostra quantos elementos já foram ordenados
+* 📝 **Explicações em tempo real**: Cada operação é explicada durante a execução
 
 ## Características do Algoritmo
 
