@@ -6,6 +6,16 @@
                  name="Learn Sorting Algorithms"
                  start-page="Learn-Sorting-ALgorithms.md">
     <toc-element topic="Learn-Sorting-ALgorithms.md"/>
-    <toc-element topic="Selection-Sort.md"/>
+    <toc-element topic="Selection-Sort.md">
+        <toc-element topic="ImplementationSelectionSort.md"/>
+        <toc-element topic="WhySelectionSortIsNotstable.md"/>
+        <toc-element topic="Advantages-vs-Disvantages.md"/>
+        <toc-element topic="WhenAreYouNeedToUseIt.md"/>
+        <toc-element topic="ComparationSelectionSort.md">
+        </toc-element>
+        <toc-element topic="SelectionSortVariations.md"/>
+        <toc-element topic="ExercisesSelectionSort.md"/>
+        <toc-element topic="ConclusionSelectionSort.md"/>
+    </toc-element>
     <toc-element topic="Bubble-Sort.md"/>
 </instance-profile>
