@@ -436,6 +436,8 @@ Implemente uma versão estável do Selection Sort.
 
 #### 💡 Solução do Exercício 3 {collapsible="true"}
 
+<resource src="../../Domus/Domus-1/exercises-selection/stableSelection.cpp">Código completo</resource>
+
 ```cpp
 #include <iostream>
 using namespace std;
