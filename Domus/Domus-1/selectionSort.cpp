@@ -2,143 +2,145 @@
 
 using namespace std;
 
-void swap(int array[], int x, int y)
+void swapElements(int dataArray[], int firstPosition, int secondPosition)
 {
-    cout << "  -> Trocando elementos: " << array[x] << " (posição " << x << ") <-> " << array[y] << " (posição " << y << ")" << endl;
-    int temp = array[x];
-    array[x] = array[y];
-    array[y] = temp;
-    cout << "  -> Após a troca: posição " << x << " = " << array[x] << ", posição " << y << " = " << array[y] << endl;
+    cout << "  -> Swapping elements: " << dataArray[firstPosition] << " (position " << firstPosition << ") <-> " << dataArray[secondPosition] << " (position " << secondPosition << ")" << endl;
+    int temporaryValue = dataArray[firstPosition];
+    dataArray[firstPosition] = dataArray[secondPosition];
+    dataArray[secondPosition] = temporaryValue;
+    cout << "  -> After swap: position " << firstPosition << " = " << dataArray[firstPosition] << ", position " << secondPosition << " = " << dataArray[secondPosition] << endl;
 }
 
-int locOfSmallest(int array[], int s, int e)
+int findSmallestElementIndex(int dataArray[], int startIndex, int endIndex)
 {
-    cout << "--- Procurando o menor elemento no intervalo [" << s << ", " << e << "] ---" << endl;
-    int i = s;
-    int j = i;
-    int comparacoes = 0;
+    cout << "--- Searching for smallest element in range [" << startIndex << ", " << endIndex << "] ---" << endl;
+    int currentIndex = startIndex;
+    int smallestIndex = currentIndex;
+    int numberOfComparisons = 0;
 
-    cout << "Elemento inicial para comparação: array[" << j << "] = " << array[j] << endl;
+    cout << "Initial element for comparison: dataArray[" << smallestIndex << "] = " << dataArray[smallestIndex] << endl;
 
-    while (i <= e)
+    while (currentIndex <= endIndex)
     {
-        cout << "Comparando array[" << i << "] = " << array[i] << " com o menor atual array[" << j << "] = " << array[j];
-        comparacoes++;
+        cout << "Comparing dataArray[" << currentIndex << "] = " << dataArray[currentIndex] << " with current smallest dataArray[" << smallestIndex << "] = " << dataArray[smallestIndex];
+        numberOfComparisons++;
         
-        if (array[i] < array[j])
+        if (dataArray[currentIndex] < dataArray[smallestIndex])
         {
-            cout << " -> " << array[i] << " é menor! Novo menor elemento encontrado na posição " << i << endl;
-            j = i;
+            cout << " -> " << dataArray[currentIndex] << " is smaller! New smallest element found at position " << currentIndex << endl;
+            smallestIndex = currentIndex;
         }
         else
         {
-            cout << " -> " << array[i] << " >= " << array[j] << ", mantendo o menor atual" << endl;
+            cout << " -> " << dataArray[currentIndex] << " >= " << dataArray[smallestIndex] << ", keeping current smallest" << endl;
         }
 
-        i++;
+        currentIndex++;
     }
 
-    cout << "Menor elemento encontrado: " << array[j] << " na posição " << j << " (após " << comparacoes << " comparações)" << endl;
-    return j;
+    cout << "Smallest element found: " << dataArray[smallestIndex] << " at position " << smallestIndex << " (after " << numberOfComparisons << " comparisons)" << endl;
+    return smallestIndex;
 }
 
-void selectionSort(int array[], int n)
+void selectionSortAlgorithm(int dataArray[], int arraySize)
 {
     cout << "========================================" << endl;
-    cout << "INICIANDO SELECTION SORT" << endl;
+    cout << "STARTING SELECTION SORT ALGORITHM" << endl;
     cout << "========================================" << endl;
-    cout << "Array inicial: ";
-    for(int k = 0; k < n; k++) {
-        cout << array[k] << " ";
+    cout << "Initial array: ";
+    for(int displayIndex = 0; displayIndex < arraySize; displayIndex++) {
+        cout << dataArray[displayIndex] << " ";
     }
     cout << endl << endl;
 
-    int totalTrocas = 0;
+    int totalNumberOfSwaps = 0;
 
-    for (int i = 0; i < n - 1; i++)
+    for (int currentPosition = 0; currentPosition < arraySize - 1; currentPosition++)
     {
-        cout << ">>> ITERAÇÃO " << (i + 1) << " <<<" << endl;
-        cout << "Procurando o menor elemento para a posição " << i << endl;
+        cout << ">>> ITERATION " << (currentPosition + 1) << " <<<" << endl;
+        cout << "Looking for smallest element for position " << currentPosition << endl;
         
-        int j = locOfSmallest(array, i, n - 1);
+        int smallestElementIndex = findSmallestElementIndex(dataArray, currentPosition, arraySize - 1);
 
-        if (i != j) {
-            cout << "Menor elemento está na posição " << j << ", precisa trocar com posição " << i << endl;
-            swap(array, i, j);
-            totalTrocas++;
+        if (currentPosition != smallestElementIndex) {
+            cout << "Smallest element is at position " << smallestElementIndex << ", need to swap with position " << currentPosition << endl;
+            swapElements(dataArray, currentPosition, smallestElementIndex);
+            totalNumberOfSwaps++;
         } else {
-            cout << "Menor elemento já está na posição correta (" << i << "), não precisa trocar" << endl;
+            cout << "Smallest element is already in correct position (" << currentPosition << "), no swap needed" << endl;
         }
 
-        cout << "Estado do array após iteração " << (i + 1) << ": ";
-        for(int k = 0; k < n; k++) {
-            if (k <= i) {
-                cout << "[" << array[k] << "] "; // Elementos já ordenados
+        cout << "Array state after iteration " << (currentPosition + 1) << ": ";
+        for(int displayIndex = 0; displayIndex < arraySize; displayIndex++) {
+            if (displayIndex <= currentPosition) {
+                cout << "[" << dataArray[displayIndex] << "] "; // Already sorted elements
             } else {
-                cout << array[k] << " ";        // Elementos ainda não ordenados
+                cout << dataArray[displayIndex] << " ";        // Not yet sorted elements
             }
         }
         cout << endl;
-        cout << "Elementos ordenados: " << (i + 1) << "/" << n << endl;
+        cout << "Elements sorted: " << (currentPosition + 1) << "/" << arraySize << endl;
         cout << "--------------------------------" << endl;
     }
 
     cout << "========================================" << endl;
-    cout << "SELECTION SORT CONCLUÍDO!" << endl;
-    cout << "Total de trocas realizadas: " << totalTrocas << endl;
+    cout << "SELECTION SORT ALGORITHM COMPLETED!" << endl;
+    cout << "Total number of swaps performed: " << totalNumberOfSwaps << endl;
     cout << "========================================" << endl;
 }
 
-void display(int array[], int size)
+void displayArray(int dataArray[], int arraySize)
 {
     cout << endl;
-    cout << "========== ARRAY RESULTADO ========== ";
+    cout << "========== ARRAY RESULT ========== ";
     cout << endl;
 
-    int i = 0;
-    while (i < size)
+    int displayIndex = 0;
+    while (displayIndex < arraySize)
     {
-        cout << array[i] << " | ";
-        i++;
+        cout << dataArray[displayIndex] << " | ";
+        displayIndex++;
     }
     cout << endl;
-    cout << "===================================== ";
+    cout << "=================================== ";
     cout << endl;
 }
 
 int main()
 {
     cout << "=============================================" << endl;
-    cout << "    DEMONSTRAÇÃO DO ALGORITMO SELECTION SORT" << endl;
+    cout << "   SELECTION SORT ALGORITHM DEMONSTRATION" << endl;
     cout << "=============================================" << endl;
     cout << endl;
     
-    int array[] = {64, 25, 12, 22, 11, 90, 5, 77, 30};
-    int size = sizeof(array) / sizeof(int);
+    int numbersArray[] = {64, 25, 12, 22, 11, 90, 5, 77, 30};
+    int arraySize = sizeof(numbersArray) / sizeof(int);
 
-    cout << "EXPLICAÇÃO DO ALGORITMO:" << endl;
-    cout << "O Selection Sort funciona dividindo o array em duas partes:" << endl;
-    cout << "- Parte ordenada (inicialmente vazia, no início do array)" << endl;
-    cout << "- Parte não ordenada (inicialmente todo o array)" << endl;
-    cout << "Em cada iteração, encontra o menor elemento da parte não ordenada" << endl;
-    cout << "e o move para o final da parte ordenada." << endl;
+    cout << "ALGORITHM EXPLANATION:" << endl;
+    cout << "Selection Sort works by dividing the array into two parts:" << endl;
+    cout << "- Sorted part (initially empty, at the beginning of the array)" << endl;
+    cout << "- Unsorted part (initially the entire array)" << endl;
+    cout << "In each iteration, it finds the smallest element from the unsorted part" << endl;
+    cout << "and moves it to the end of the sorted part." << endl;
     cout << endl;
     
-    cout << "Array antes da ordenação:";
-    display(array, size);
+    cout << "Array before sorting:";
+    displayArray(numbersArray, arraySize);
     
-    selectionSort(array, size);
+    selectionSortAlgorithm(numbersArray, arraySize);
     
-    cout << "Array após a ordenação:";
-    display(array, size);
+    cout << "Array after sorting:";
+    displayArray(numbersArray, arraySize);
     
     cout << endl;
-    cout << "Observações:" << endl;
-    cout << "- O algoritmo sempre faz exatamente n-1 passadas" << endl;
-    cout << "- Em cada passada, encontra o menor elemento restante" << endl;
-    cout << "- A parte esquerda do array fica sempre ordenada" << endl;
-    cout << "- É mais eficiente que o Bubble Sort para arrays pequenos" << endl;
-    cout << "- Tempo de complexidade: O(n²) comparações, O(n) trocas" << endl;
+    cout << "IMPORTANT OBSERVATIONS:" << endl;
+    cout << "- The algorithm always performs exactly n-1 passes" << endl;
+    cout << "- In each pass, it finds the smallest remaining element" << endl;
+    cout << "- The left part of the array is always kept sorted" << endl;
+    cout << "- It is more efficient than Bubble Sort for small arrays" << endl;
+    cout << "- Time complexity: O(n²) comparisons, O(n) swaps" << endl;
+    cout << "- It is NOT a stable sorting algorithm" << endl;
+    cout << "- Performs well when memory writes are expensive" << endl;
 
     return 0;
 }

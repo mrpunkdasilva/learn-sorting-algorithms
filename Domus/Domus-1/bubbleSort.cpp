@@ -2,88 +2,88 @@
 
 using namespace std;
 
-void swap(int array[], int x, int y)
+void swapElements(int dataArray[], int firstPosition, int secondPosition)
 {
-  cout << "  -> Trocando elementos: " << array[x] << " (posição " << x << ") <-> " << array[y] << " (posição " << y << ")" << endl;
-  int temporary = array[x];
-  array[x] = array[y];
-  array[y] = temporary;
-  cout << "  -> Após a troca: posição " << x << " = " << array[x] << ", posição " << y << " = " << array[y] << endl;
+  cout << "  -> Swapping elements: " << dataArray[firstPosition] << " (position " << firstPosition << ") <-> " << dataArray[secondPosition] << " (position " << secondPosition << ")" << endl;
+  int temporaryValue = dataArray[firstPosition];
+  dataArray[firstPosition] = dataArray[secondPosition];
+  dataArray[secondPosition] = temporaryValue;
+  cout << "  -> After swap: position " << firstPosition << " = " << dataArray[firstPosition] << ", position " << secondPosition << " = " << dataArray[secondPosition] << endl;
 }
 
-void bubble(int array[], int n)
+void performBubblePass(int dataArray[], int arraySize)
 {
-  cout << "--- Iniciando uma passada do bubble ---" << endl;
-  int i = n - 1;
-  int trocas = 0;
+  cout << "--- Starting a bubble pass ---" << endl;
+  int currentIndex = arraySize - 1;
+  int numberOfSwaps = 0;
   
-  while (i > 0)
+  while (currentIndex > 0)
   {
-    cout << "Comparando array[" << i << "] = " << array[i] << " com array[" << (i-1) << "] = " << array[i-1];
+    cout << "Comparing dataArray[" << currentIndex << "] = " << dataArray[currentIndex] << " with dataArray[" << (currentIndex-1) << "] = " << dataArray[currentIndex-1];
     
-    if (array[i] < array[i - 1])
+    if (dataArray[currentIndex] < dataArray[currentIndex - 1])
     {
-      cout << " -> " << array[i] << " é menor que " << array[i-1] << ", precisa trocar!" << endl;
-      swap(array, i, i - 1);
-      trocas++;
+      cout << " -> " << dataArray[currentIndex] << " is smaller than " << dataArray[currentIndex-1] << ", need to swap!" << endl;
+      swapElements(dataArray, currentIndex, currentIndex - 1);
+      numberOfSwaps++;
     }
     else
     {
-      cout << " -> " << array[i] << " >= " << array[i-1] << ", não precisa trocar." << endl;
+      cout << " -> " << dataArray[currentIndex] << " >= " << dataArray[currentIndex-1] << ", no swap needed." << endl;
     }
-    i--;
+    currentIndex--;
   }
   
-  cout << "--- Fim da passada. Total de trocas: " << trocas << " ---" << endl;
+  cout << "--- End of pass. Total swaps: " << numberOfSwaps << " ---" << endl;
   cout << endl;
 }
 
-void bubbleSort(int array[], int n)
+void bubbleSortAlgorithm(int dataArray[], int arraySize)
 {
   cout << "========================================" << endl;
-  cout << "INICIANDO BUBBLE SORT" << endl;
+  cout << "STARTING BUBBLE SORT ALGORITHM" << endl;
   cout << "========================================" << endl;
-  cout << "Array inicial: ";
-  for(int j = 0; j < n; j++) {
-    cout << array[j] << " ";
+  cout << "Initial array: ";
+  for(int displayIndex = 0; displayIndex < arraySize; displayIndex++) {
+    cout << dataArray[displayIndex] << " ";
   }
   cout << endl << endl;
   
-  int i = 0;
-  while (i <= n - 1)
+  int iterationNumber = 0;
+  while (iterationNumber <= arraySize - 1)
   {
-    cout << ">>> ITERAÇÃO " << (i + 1) << " <<<" << endl;
-    bubble(array, n);
+    cout << ">>> ITERATION " << (iterationNumber + 1) << " <<<" << endl;
+    performBubblePass(dataArray, arraySize);
     
-    cout << "Estado do array após iteração " << (i + 1) << ": ";
-    for(int j = 0; j < n; j++) {
-      cout << array[j] << " ";
+    cout << "Array state after iteration " << (iterationNumber + 1) << ": ";
+    for(int displayIndex = 0; displayIndex < arraySize; displayIndex++) {
+      cout << dataArray[displayIndex] << " ";
     }
     cout << endl;
     cout << "--------------------------------" << endl;
     
-    i++;
+    iterationNumber++;
   }
   
   cout << "========================================" << endl;
-  cout << "BUBBLE SORT CONCLUÍDO!" << endl;
+  cout << "BUBBLE SORT ALGORITHM COMPLETED!" << endl;
   cout << "========================================" << endl;
 }
 
-void display(int array[], int size)
+void displayArray(int dataArray[], int arraySize)
 {
   cout << endl;
-  cout << "========== ARRAY RESULTADO ========== ";
+  cout << "========== ARRAY RESULT ========== ";
   cout << endl;
 
-  int i = 0;
-  while (i < size)
+  int displayIndex = 0;
+  while (displayIndex < arraySize)
   {
-    cout << array[i] << " | ";
-    i++;
+    cout << dataArray[displayIndex] << " | ";
+    displayIndex++;
   }
   cout << endl;
-  cout << "===================================== ";
+  cout << "=================================== ";
   cout << endl;
 }
 
@@ -91,33 +91,36 @@ void display(int array[], int size)
 int main()
 {
   cout << "===========================================" << endl;
-  cout << "    DEMONSTRAÇÃO DO ALGORITMO BUBBLE SORT" << endl;
+  cout << "    BUBBLE SORT ALGORITHM DEMONSTRATION" << endl;
   cout << "===========================================" << endl;
   cout << endl;
   
-  int array[] = {123, 578, 12, 35, 1245, 745, 901, 901, 9901901, 901};
-  int size = sizeof(array) / sizeof(int);
+  int numbersArray[] = {64, 34, 25, 12, 22, 11, 90, 88, 76, 50};
+  int arraySize = sizeof(numbersArray) / sizeof(int);
 
-  cout << "EXPLICAÇÃO DO ALGORITMO:" << endl;
-  cout << "O Bubble Sort compara elementos adjacentes e os troca se estiverem" << endl;
-  cout << "na ordem errada. Esse processo é repetido até que nenhuma troca" << endl;
-  cout << "seja mais necessária." << endl;
+  cout << "ALGORITHM EXPLANATION:" << endl;
+  cout << "Bubble Sort compares adjacent elements and swaps them if they are" << endl;
+  cout << "in the wrong order. This process is repeated until no more swaps" << endl;
+  cout << "are needed. The name 'bubble' comes from the way smaller elements" << endl;
+  cout << "'bubble' to the beginning of the array." << endl;
   cout << endl;
   
-  cout << "Array antes da ordenação:";
-  display(array, size);
+  cout << "Array before sorting:";
+  displayArray(numbersArray, arraySize);
   
-  bubbleSort(array, size);
+  bubbleSortAlgorithm(numbersArray, arraySize);
   
-  cout << "Array após a ordenação:";
-  display(array, size);
+  cout << "Array after sorting:";
+  displayArray(numbersArray, arraySize);
   
   cout << endl;
-  cout << "Observações:" << endl;
-  cout << "- O algoritmo fez várias passadas pelo array" << endl;
-  cout << "- Em cada passada, os elementos 'borbulharam' para suas posições corretas" << endl;
-  cout << "- O menor elemento sempre vai para o início do array" << endl;
-  cout << "- O processo continua até que não haja mais trocas necessárias" << endl;
+  cout << "IMPORTANT OBSERVATIONS:" << endl;
+  cout << "- The algorithm made multiple passes through the array" << endl;
+  cout << "- In each pass, smaller elements 'bubbled' towards the beginning" << endl;
+  cout << "- Each element is compared with its adjacent neighbor" << endl;
+  cout << "- The process continues until no more swaps are necessary" << endl;
+  cout << "- Time complexity: O(n²) in worst case, O(n) in best case" << endl;
+  cout << "- It is a stable sorting algorithm (maintains relative order)" << endl;
 
   return 0;
 }
