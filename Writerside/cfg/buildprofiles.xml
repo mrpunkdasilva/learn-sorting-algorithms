@@ -5,7 +5,7 @@
 
     <sitemap priority="0.35" change-frequency="monthly"/>
 
-     <variables>
+    <variables>
         <header-logo>logo-primary.svg</header-logo>
         <custom-favicons>logo-primary.svg</custom-favicons>
     </variables>
@@ -13,9 +13,11 @@
     <build-profile instance="lds">
         <variables>
             <noindex-content>true</noindex-content>
-            <primary-color>strawberry</primary-color>
+            <primary-color>iris</primary-color>
         </variables>
     </build-profile>
+
+    <llms-txt single-file="true"/>
 
     <footer>
         <copyright>PunkDomus 2025</copyright>
