@@ -362,8 +362,6 @@ Nossa implementação educativa inclui saídas detalhadas para ajudar no aprendi
 
 Você pode encontrar uma implementação completa e educativa do Selection Sort em:
 
-[* 📁 `Domus/Domus-1/selectionSort.cpp`](resources/selectionSort.cpp)
-
 ## Função Principal - Selection Sort Algorithm
 
 ```CPP
@@ -747,8 +745,6 @@ Implemente o Selection Sort para ordenar um array de strings por ordem alfabéti
 
 ### 💡 Solução do Exercício 1
 
-[Código completo](resources/selectionSortString.cpp)
-
 ```CPP
 #include <iostream>
 #include <string>
@@ -839,8 +835,6 @@ Pontos importantes:
 Modifique o algoritmo para contar o número de comparações e trocas realizadas.
 
 ### 💡 Solução do Exercício 2
-
-[Código completo](resources/selectionWithStats.cpp)
 
 ```CPP
 #include <iostream>
@@ -952,8 +946,6 @@ Análise das Estatísticas:
 Implemente uma versão estável do Selection Sort.
 
 ### 💡 Solução do Exercício 3
-
-[Código completo](resources/stableSelection.cpp)
 
 ```CPP
 #include <iostream>
