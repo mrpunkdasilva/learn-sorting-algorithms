@@ -7,4 +7,5 @@
                  start-page="Learn-Sorting-ALgorithms.md">
     <toc-element topic="Learn-Sorting-ALgorithms.md"/>
     <toc-element topic="Selection-Sort.md"/>
+    <toc-element topic="Bubble-Sort.md"/>
 </instance-profile>

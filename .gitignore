@@ -1,10 +1,113 @@
-### Example user template template
-### Example user template
+### Learn Sorting Algorithms - GitIgnore ###
 
+# ======================================
+# IDE Files
+# ======================================
 # IntelliJ project files
 .idea
 *.iml
 out
 gen
-!/README.md
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# ======================================
+# C/C++ Compiled Files & Executables
+# ======================================
+# Compiled Object files
+*.o
+*.obj
+*.ko
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
 *.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Linux executables (no extension)
+**/bubbleSort
+**/selectionSort
+**/insertionSort
+**/mergeSort
+**/quickSort
+**/heapSort
+
+# CMake generated files
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# ======================================
+# Build & Debug Directories
+# ======================================
+build/
+debug/
+release/
+bin/
+obj/
+
+# ======================================
+# OS Generated Files
+# ======================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# ======================================
+# Logs & Temporary Files
+# ======================================
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ======================================
+# Project Specific
+# ======================================
+# Documentation generated files
+docs/generated/
+
+# Keep README files
+!/README.md
+!/**/README.md

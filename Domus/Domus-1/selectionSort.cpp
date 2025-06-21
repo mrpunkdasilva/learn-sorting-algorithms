@@ -2,64 +2,145 @@
 
 using namespace std;
 
-void swap(int array[], int x, int y)
+void swapElements(int dataArray[], int firstPosition, int secondPosition)
 {
-    int temp = array[x];
-    array[x] = array[y];
-    array[y] = temp;
+    cout << "  -> Swapping elements: " << dataArray[firstPosition] << " (position " << firstPosition << ") <-> " << dataArray[secondPosition] << " (position " << secondPosition << ")" << endl;
+    int temporaryValue = dataArray[firstPosition];
+    dataArray[firstPosition] = dataArray[secondPosition];
+    dataArray[secondPosition] = temporaryValue;
+    cout << "  -> After swap: position " << firstPosition << " = " << dataArray[firstPosition] << ", position " << secondPosition << " = " << dataArray[secondPosition] << endl;
 }
 
-int locOfSmallest(int array[], int s, int e)
+int findSmallestElementIndex(int dataArray[], int startIndex, int endIndex)
 {
-    int i = s;
-    int j = i;
+    cout << "--- Searching for smallest element in range [" << startIndex << ", " << endIndex << "] ---" << endl;
+    int currentIndex = startIndex;
+    int smallestIndex = currentIndex;
+    int numberOfComparisons = 0;
 
-    while (i <= e)
+    cout << "Initial element for comparison: dataArray[" << smallestIndex << "] = " << dataArray[smallestIndex] << endl;
+
+    while (currentIndex <= endIndex)
     {
-        if (array[i] < array[j])
+        cout << "Comparing dataArray[" << currentIndex << "] = " << dataArray[currentIndex] << " with current smallest dataArray[" << smallestIndex << "] = " << dataArray[smallestIndex];
+        numberOfComparisons++;
+        
+        if (dataArray[currentIndex] < dataArray[smallestIndex])
         {
-            j = i;
+            cout << " -> " << dataArray[currentIndex] << " is smaller! New smallest element found at position " << currentIndex << endl;
+            smallestIndex = currentIndex;
+        }
+        else
+        {
+            cout << " -> " << dataArray[currentIndex] << " >= " << dataArray[smallestIndex] << ", keeping current smallest" << endl;
         }
 
-        i++;
+        currentIndex++;
     }
 
-    return j;
+    cout << "Smallest element found: " << dataArray[smallestIndex] << " at position " << smallestIndex << " (after " << numberOfComparisons << " comparisons)" << endl;
+    return smallestIndex;
 }
 
-void selectionSort(int array[], int n)
+void selectionSortAlgorithm(int dataArray[], int arraySize)
 {
-    for (int i = 0; i < n - 1; i++)
-    {
-        int j = locOfSmallest(array, i, n - 1);
-
-        swap(array, i, j);
+    cout << "========================================" << endl;
+    cout << "STARTING SELECTION SORT ALGORITHM" << endl;
+    cout << "========================================" << endl;
+    cout << "Initial array: ";
+    for(int displayIndex = 0; displayIndex < arraySize; displayIndex++) {
+        cout << dataArray[displayIndex] << " ";
     }
+    cout << endl << endl;
+
+    int totalNumberOfSwaps = 0;
+
+    for (int currentPosition = 0; currentPosition < arraySize - 1; currentPosition++)
+    {
+        cout << ">>> ITERATION " << (currentPosition + 1) << " <<<" << endl;
+        cout << "Looking for smallest element for position " << currentPosition << endl;
+        
+        int smallestElementIndex = findSmallestElementIndex(dataArray, currentPosition, arraySize - 1);
+
+        if (currentPosition != smallestElementIndex) {
+            cout << "Smallest element is at position " << smallestElementIndex << ", need to swap with position " << currentPosition << endl;
+            swapElements(dataArray, currentPosition, smallestElementIndex);
+            totalNumberOfSwaps++;
+        } else {
+            cout << "Smallest element is already in correct position (" << currentPosition << "), no swap needed" << endl;
+        }
+
+        cout << "Array state after iteration " << (currentPosition + 1) << ": ";
+        for(int displayIndex = 0; displayIndex < arraySize; displayIndex++) {
+            if (displayIndex <= currentPosition) {
+                cout << "[" << dataArray[displayIndex] << "] "; // Already sorted elements
+            } else {
+                cout << dataArray[displayIndex] << " ";        // Not yet sorted elements
+            }
+        }
+        cout << endl;
+        cout << "Elements sorted: " << (currentPosition + 1) << "/" << arraySize << endl;
+        cout << "--------------------------------" << endl;
+    }
+
+    cout << "========================================" << endl;
+    cout << "SELECTION SORT ALGORITHM COMPLETED!" << endl;
+    cout << "Total number of swaps performed: " << totalNumberOfSwaps << endl;
+    cout << "========================================" << endl;
 }
 
-void display(int array[], int n)
+void displayArray(int dataArray[], int arraySize)
 {
-    int i = 0;
     cout << endl;
-    cout << " ========== ";
+    cout << "========== ARRAY RESULT ========== ";
     cout << endl;
-    while (i < n)
+
+    int displayIndex = 0;
+    while (displayIndex < arraySize)
     {
-        cout << array[i] << " | ";
-        i++;
+        cout << dataArray[displayIndex] << " | ";
+        displayIndex++;
     }
+    cout << endl;
+    cout << "=================================== ";
+    cout << endl;
 }
 
 int main()
 {
-    int array[] = {2, 34, 23, 12, 55, 34, 56, 157};
-    int size = sizeof(array) / sizeof(int);
+    cout << "=============================================" << endl;
+    cout << "   SELECTION SORT ALGORITHM DEMONSTRATION" << endl;
+    cout << "=============================================" << endl;
+    cout << endl;
+    
+    int numbersArray[] = {64, 25, 12, 22, 11, 90, 5, 77, 30};
+    int arraySize = sizeof(numbersArray) / sizeof(int);
 
-    display(array, size);
-
-    selectionSort(array, size);
-
-    display(array, size);
+    cout << "ALGORITHM EXPLANATION:" << endl;
+    cout << "Selection Sort works by dividing the array into two parts:" << endl;
+    cout << "- Sorted part (initially empty, at the beginning of the array)" << endl;
+    cout << "- Unsorted part (initially the entire array)" << endl;
+    cout << "In each iteration, it finds the smallest element from the unsorted part" << endl;
+    cout << "and moves it to the end of the sorted part." << endl;
+    cout << endl;
+    
+    cout << "Array before sorting:";
+    displayArray(numbersArray, arraySize);
+    
+    selectionSortAlgorithm(numbersArray, arraySize);
+    
+    cout << "Array after sorting:";
+    displayArray(numbersArray, arraySize);
+    
+    cout << endl;
+    cout << "IMPORTANT OBSERVATIONS:" << endl;
+    cout << "- The algorithm always performs exactly n-1 passes" << endl;
+    cout << "- In each pass, it finds the smallest remaining element" << endl;
+    cout << "- The left part of the array is always kept sorted" << endl;
+    cout << "- It is more efficient than Bubble Sort for small arrays" << endl;
+    cout << "- Time complexity: O(n²) comparisons, O(n) swaps" << endl;
+    cout << "- It is NOT a stable sorting algorithm" << endl;
+    cout << "- Performs well when memory writes are expensive" << endl;
 
     return 0;
 }
