@@ -9,6 +9,8 @@
 out
 gen
 
+.zencoder
+
 # VS Code
 .vscode/
 *.code-workspace
