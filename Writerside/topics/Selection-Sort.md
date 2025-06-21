@@ -15,11 +15,12 @@ O algoritmo funciona da seguinte forma:
 3. **Expande** a parte ordenada em uma posição
 4. **Repete** o processo até que todo o array esteja ordenado
 
-## Diagramação {collapsible="true"}
+## Diagramação
 
-![selectionSort_anotado.svg](selectionSort_anotado.svg)
+![selectionSort_annotated.png](selectionSort_annotated.png)
 
-### Exemplo Visual
+
+## Exemplo Visual
 
 Considerando o array: `[64, 25, 12, 22, 11]`
 
