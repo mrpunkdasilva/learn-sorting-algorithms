@@ -1,3 +1,0 @@
-# LinkedList
-
-Start typing here...
