@@ -51,13 +51,6 @@ gen
 *.x86_64
 *.hex
 
-# Linux executables (no extension)
-**/bubbleSort
-**/selectionSort
-**/insertionSort
-**/mergeSort
-**/quickSort
-**/heapSort
 
 # CMake generated files
 cmake-build-*/
