@@ -4,7 +4,7 @@ Nossa implementação educativa inclui saídas detalhadas para ajudar no aprendi
 
 Você pode encontrar uma implementação completa e educativa do Bubble Sort em:
 
-<resource src="../../../Domus/Domus-1/bubbleSort.cpp">
+<resource src="../../Domus/Domus-1/bubbleSort.cpp">
 
 - 📁 `Domus/Domus-1/bubbleSort.cpp`
 
